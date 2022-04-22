@@ -19,5 +19,5 @@ public class MarkdownParseTest {//This is the class where are the testing method
             ArrayList<String> inputResult = MarkdownParse.getLinks(contents);//puts wtv is stored in result (now called contents) into the class we created
             assertEquals(inputResult, List.of("https://something.com", "some-thing.html"));//checks expected and actual output 
     }
+    //The error on line 17 cannot be removed. I tried to test the checkLinks test using the red circle and the error appeared. 
 }
-//The error on line 17 cannot be removed. I tried to test the checkLinks test using the red circle and the error appeared. 
