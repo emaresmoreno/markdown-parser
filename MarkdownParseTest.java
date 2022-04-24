@@ -18,6 +18,17 @@ public class MarkdownParseTest {//This is the class where are the testing method
             //contents gets the information that is stored in result
             ArrayList<String> inputResult = MarkdownParse.getLinks(contents);//puts wtv is stored in result (now called contents) into the class we created
             assertEquals(inputResult, List.of("https://something.com", "some-thing.html"));//checks expected and actual output 
+            //The error on line 17 cannot be removed. I tried to test the checkLinks test using the red circle and the error appeared. 
     }
-    //The error on line 17 cannot be removed. I tried to test the checkLinks test using the red circle and the error appeared. 
+
+    @Test
+    public void check() throws IOException {
+        Path whichFile = Path.of("testfile1.md");
+        String contentsOf = Files.readString(whichFile);
+        ArrayList<String> outcome = MarkdownParse.getLinks(contentsOf);
+        assertEquals(outcome, List.of(""));
+    }
+
+    
+
 }
